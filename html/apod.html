@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Mars</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <nav
+      class="p-5 bg-white shadow md:flex md:items-center md:justify-between z-999 border-b-2"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl text-blue-700"> Coisas de Marte </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="shadow-lg md:shadow-none md:flex md:items-center md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a href="/index.html" class="text-xl hover:text-blue-700 duration-500"
+            >Início</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="/html/pokedex.html"
+            class="text-xl hover:text-blue-700 duration-500"
+            >Rover</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="/html/apod.html"
+            class="text-xl hover:text-blue-700 duration-500 border-b-2 border-blue-700"
+            >APOD</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="w-full">
+        <div class=" sm:m-10 md:m-20 bg-white mx-auto text-center sm:w-3/4 sm:rounded shadow-xl flex-col p-10">
+            <form class="dateSearch flex-1 my-5">
+              <input type="search" class="hidden w-full dateInput border-2 border-blue-700" placeholder="Insira uma data" value="" required>
+            </form>
+            <div class="showDate">
+              <p>Foto do Dia:</p>
+              <span class="inputDate"></span>
+            </div>
+            <div class="flex-1 md:my-5">
+              <iframe src="" frameborder="0" class="w-full renderImage aspect-w-16 aspect-h-9 mx-auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="flex-1 my-5">
+              <p class="explanation"></p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            background-color: rgb(59 130 246);
+        }
+    </style>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
